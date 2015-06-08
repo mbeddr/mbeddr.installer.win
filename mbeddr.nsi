@@ -60,6 +60,10 @@ Section "!mbeddr" SEC_MBEDDR
   SectionIn RO
   SetOutPath "$INSTDIR"
   SetOverwrite ifnewer
+  
+  FILE /r ".\files\3rd-party\MPS 3.2\*"
+  FILE /r ".\files\mbeddr\*"
+  
   CreateDirectory "$SMPROGRAMS\mbeddr"
   CreateShortCut "$SMPROGRAMS\mbeddr\mbeddr.lnk" "$INSTDIR\mps.bat"
   CreateShortCut "$DESKTOP\mbeddr.lnk" "$INSTDIR\mps.bat"
@@ -119,6 +123,7 @@ SectionGroup "3rd party" SEC_3rdParty
   Section -AdditionalIcons
     WriteIniStr "$INSTDIR\${PRODUCT_NAME}.url" "InternetShortcut" "URL" "${PRODUCT_WEB_SITE}"
     CreateShortCut "$SMPROGRAMS\mbeddr\Website.lnk" "$INSTDIR\${PRODUCT_NAME}.url"
+    CreateShortCut "$SMPROGRAMS\mbeddr\Userguide.lnk" "$INSTDIR\mbeddr-userguide\MbeddrUserGuide.html"
     CreateShortCut "$SMPROGRAMS\mbeddr\Uninstall.lnk" "$INSTDIR\uninst.exe"
   SectionEnd
 SectionGroupEnd
