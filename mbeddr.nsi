@@ -61,7 +61,7 @@ Section "!mbeddr" SEC_MBEDDR
   SetOutPath "$INSTDIR"
   SetOverwrite ifnewer
   
-  FILE /r ".\files\3rd-party\MPS 3.2\*"
+  FILE /r ".\files\3rd-party\MPS 3.3\*"
   FILE /r ".\files\mbeddr\*"
   
   CreateDirectory "$SMPROGRAMS\mbeddr"
