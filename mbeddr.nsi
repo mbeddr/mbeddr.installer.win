@@ -27,9 +27,7 @@
 ; Instfiles page
 !insertmacro MUI_PAGE_INSTFILES
 ; Finish page
-!define MUI_FINISHPAGE_RUN "$INSTDIR\mps.bat"
-!define MUI_FINISHPAGE_SHOWREADME "$INSTDIR\userguide.pdf"
-  !define MUI_FINISHPAGE_SHOWREADME_TEXT "Show user guide"
+!define MUI_FINISHPAGE_RUN "$INSTDIR\mbeddr.bat"
 !insertmacro MUI_PAGE_FINISH
 
 ; Uninstaller pages
@@ -61,12 +59,11 @@ Section "!mbeddr" SEC_MBEDDR
   SetOutPath "$INSTDIR"
   SetOverwrite ifnewer
   
-  FILE /r ".\files\3rd-party\MPS 3.3\*"
   FILE /r ".\files\mbeddr\*"
   
   CreateDirectory "$SMPROGRAMS\mbeddr"
-  CreateShortCut "$SMPROGRAMS\mbeddr\mbeddr.lnk" "$INSTDIR\mps.bat"
-  CreateShortCut "$DESKTOP\mbeddr.lnk" "$INSTDIR\mps.bat"
+  CreateShortCut "$SMPROGRAMS\mbeddr\mbeddr.lnk" "$INSTDIR\mbeddr.bat"
+  CreateShortCut "$DESKTOP\mbeddr.lnk" "$INSTDIR\mbeddr.bat"
 
 SectionEnd
 
