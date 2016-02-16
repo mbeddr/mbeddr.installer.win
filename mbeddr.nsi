@@ -98,13 +98,14 @@ SectionGroup "3rd party" SEC_3rdParty
   SectionEnd
 
   Section "CBMC" SEC_CBMC
-    SetOutPath "$INSTDIR"
+    CreateDirectory "$INSTDIR\cbmc"
+    SetOutPath "$INSTDIR\cbmc"
     SetOverwrite ifnewer
     FILE /r ".\files\3rd-party\cbmc\*"
 
     ; set variable
     WriteRegExpandStr ${env_hklm} ${cbmc_env_var} '"$INSTDIR\cbmc-5\cbmc.exe"'
-    ${EnvVarUpdate} $0 "PATH" "A" "HKLM" "$INSTDIR\cbmc-5"
+    ${EnvVarUpdate} $0 "PATH" "A" "HKLM" "$INSTDIR\cbmc"
   SectionEnd
 
   Section "GraphViz" SEC_GRAPHVIZ
