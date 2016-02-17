@@ -104,7 +104,7 @@ SectionGroup "3rd party" SEC_3rdParty
     FILE /r ".\files\3rd-party\cbmc\*"
 
     ; set variable
-    WriteRegExpandStr ${env_hklm} ${cbmc_env_var} '"$INSTDIR\cbmc-5\cbmc.exe"'
+    WriteRegExpandStr ${env_hklm} ${cbmc_env_var} '"$INSTDIR\cbmc\cbmc.exe"'
     ${EnvVarUpdate} $0 "PATH" "A" "HKLM" "$INSTDIR\cbmc"
   SectionEnd
 
@@ -161,7 +161,7 @@ Section Uninstall
   RMDir /r "$INSTDIR"
 
   ; remove entries from the path
-  ${un.EnvVarUpdate} $0 "PATH" "R" "HKLM" "$INSTDIR\cbmc-5"
+  ${un.EnvVarUpdate} $0 "PATH" "R" "HKLM" "$INSTDIR\cbmc"
   ${un.EnvVarUpdate} $0 "PATH" "R" "HKLM" "$INSTDIR\graphviz-2.38\bin\"
 
   ; remove env variable reg keys
