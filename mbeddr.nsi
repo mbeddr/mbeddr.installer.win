@@ -121,7 +121,6 @@ SectionGroup "3rd party" SEC_3rdParty
   Section -AdditionalIcons
     WriteIniStr "$INSTDIR\${PRODUCT_NAME}.url" "InternetShortcut" "URL" "${PRODUCT_WEB_SITE}"
     CreateShortCut "$SMPROGRAMS\mbeddr\Website.lnk" "$INSTDIR\${PRODUCT_NAME}.url"
-    CreateShortCut "$SMPROGRAMS\mbeddr\Userguide.lnk" "$INSTDIR\mbeddr-userguide\MbeddrUserGuide.html"
     CreateShortCut "$SMPROGRAMS\mbeddr\Uninstall.lnk" "$INSTDIR\uninst.exe"
   SectionEnd
 SectionGroupEnd
