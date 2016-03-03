@@ -62,8 +62,8 @@ Section "!mbeddr" SEC_MBEDDR
   FILE /r ".\files\mbeddr\*"
   
   CreateDirectory "$SMPROGRAMS\mbeddr"
-  CreateShortCut "$SMPROGRAMS\mbeddr\mbeddr.lnk" "$INSTDIR\mbeddr.bat"
-  CreateShortCut "$DESKTOP\mbeddr.lnk" "$INSTDIR\mbeddr.bat"
+  CreateShortCut "$SMPROGRAMS\mbeddr\mbeddr.lnk" "$INSTDIR\mbeddr.bat" "$INSTDIR\mbeddr.ico" 0
+  CreateShortCut "$DESKTOP\mbeddr.lnk" "$INSTDIR\mbeddr.bat" "$INSTDIR\mbeddr.ico" 0
 
 SectionEnd
 
