@@ -104,7 +104,7 @@ SectionGroup "3rd party" SEC_3rdParty
     FILE /r ".\files\3rd-party\cbmc\*"
 
     ; set variable
-    WriteRegExpandStr ${env_hklm} ${cbmc_env_var} '"$INSTDIR\cbmc\cbmc.exe"'
+    WriteRegExpandStr ${env_hklm} ${cbmc_env_var} '$INSTDIR\cbmc\cbmc.exe'
     ${EnvVarUpdate} $0 "PATH" "A" "HKLM" "$INSTDIR\cbmc"
   SectionEnd
 
