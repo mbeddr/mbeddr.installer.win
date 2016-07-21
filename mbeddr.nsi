@@ -27,7 +27,6 @@
 ; Instfiles page
 !insertmacro MUI_PAGE_INSTFILES
 ; Finish page
-!define MUI_FINISHPAGE_RUN "$INSTDIR\mbeddr.bat"
 !insertmacro MUI_PAGE_FINISH
 
 ; Uninstaller pages
