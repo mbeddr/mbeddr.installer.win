@@ -89,7 +89,7 @@ SectionGroup "3rd party" SEC_3rdParty
    ok:
 
     ; install make (msys), gcc, gdb, mingw-make, unix-essentials (rm, ...)
-    nsExec::ExecToLog '"c:\mingw\bin\mingw-get.exe" install "gcc=4.8.1-4" "mingw32-make=3.82.90-2" "gdb=7.6.1-1" msys msys-coreutils'
+    nsExec::ExecToLog '"c:\mingw\bin\mingw-get.exe" install "gcc=4.8.1-4" "mingw32-make=3.82.90-2" "gdb=7.6.1-1" msys msys-coreutils msys-make'
 
     ; modify the path variable
     ${EnvVarUpdate} $0 "PATH" "A" "HKLM" "c:\mingw\bin"
