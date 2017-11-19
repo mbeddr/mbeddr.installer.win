@@ -3,7 +3,7 @@
 !include "EnvVarUpdate.nsh"
 
 !define PRODUCT_NAME "mbeddr"
-!define PRODUCT_VERSION "1.0"
+!define PRODUCT_VERSION "2017.2.0"
 !define PRODUCT_PUBLISHER "mbeddr"
 !define PRODUCT_WEB_SITE "http://www.mbeddr.com"
 
